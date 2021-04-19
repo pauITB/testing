@@ -58,8 +58,8 @@ public class MainActivityTest {
         onView(withId(R.id.button)).perform(click());
         onView(withId(R.id.WelcomeActivity)).check(matches(isCompletelyDisplayed()));
     }
-
     @Test
+    @LargeTest
     public void username_password_introducced_nextButtonClick_go_WelcomeActivity_BackButtonClick_go_MainActivity(){
         onView(withId(R.id.editText_username)).perform(typeText(USER_TO_BE_TYPED));
         onView(withId(R.id.editText_password)).perform(typeText(PASS_TO_BE_TYPED)).perform(closeSoftKeyboard());
